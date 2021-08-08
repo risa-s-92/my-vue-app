@@ -4,6 +4,7 @@
       <img alt="Vue logo" src="./assets/logo.png" />
       <div class="hello-world__message">
         {{ message }}
+        こんばんは
       </div>
     </div>
     <TodoList></TodoList>
