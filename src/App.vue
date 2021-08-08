@@ -1,23 +1,26 @@
-```html
 <template>
   <div id="app">
-    <div class="hello-wrold">
+    <div class="hello-world">
       <img alt="Vue logo" src="./assets/logo.png" />
-      <div class="hello-wrold__message">
+      <div class="hello-world__message">
         {{ message }}
+        こんばんは
       </div>
     </div>
-    **<TodoList />**
+    <TodoList></TodoList>
+    <Counter v-bind:initialValue="1000"></Counter>
   </div>
 </template>
 
 <script>
-**import TodoList from "@/components/TodoList.vue"**
+import TodoList from "@/components/TodoList.vue"
+import Counter from "@/components/Counter.vue"
 export default {
   name: "App",
-  **components: {
-    TodoList
-  },**
+  components: {
+    TodoList,
+    Counter,
+  },
   data: function () {
     return {
       message: "WebExpert Course Vue Template",
@@ -36,13 +39,12 @@ export default {
 </style>
 
 <style scoped>
-.hello-wrold {
+.hello-world {
   margin-top: 60px;
   text-align: center;
 }
 
-.hello-wrold .hello-world__message {
+.hello-world .hello-world__message {
   color: #2c3e50;
 }
 </style>
-```
